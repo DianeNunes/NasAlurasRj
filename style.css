@@ -1,0 +1,1021 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f6ef;
+    color: #173b2b;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(248, 246, 239, 0.94);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(23, 59, 43, 0.08);
+}
+
+.nav {
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 105px;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #173b2b;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e39b19;
+}
+
+.menu-mobile {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+    color: #173b2b;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(18, 73, 48, 0.96),
+            rgba(36, 112, 73, 0.78)
+        ),
+        url("logo.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(245, 184, 65, 0.35),
+            transparent 30%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    color: white;
+}
+
+.hero-tag {
+    display: inline-block;
+
+    margin-bottom: 22px;
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    background: #f3b323;
+    color: #173b2b;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    max-width: 780px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    color: #ffd166;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 27px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #f3b323;
+    color: #173b2b;
+
+    box-shadow: 0 10px 25px rgba(243, 179, 35, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+
+    background: #ffd166;
+}
+
+.btn-outline {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #173b2b;
+}
+
+.scroll {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 12px;
+    text-align: center;
+
+    opacity: 0.8;
+}
+
+.scroll span {
+    display: block;
+
+    font-size: 24px;
+
+    animation: subirDescer 1.5s infinite;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    padding: 110px 0;
+
+    background: #fffdf7;
+}
+
+.sobre-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.section-tag {
+    display: inline-block;
+
+    color: #d58c0b;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.sobre h2,
+.trilhas h2,
+.experiencia h2,
+.contato h2 {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(34px, 4vw, 55px);
+
+    line-height: 1.1;
+
+    color: #173b2b;
+
+    margin-bottom: 25px;
+}
+
+.sobre h2 span,
+.trilhas h2 span,
+.experiencia h2 span,
+.contato h2 span {
+    color: #e19b18;
+}
+
+.sobre-text p {
+    max-width: 650px;
+
+    color: #5b6b61;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+.stats {
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 40px;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 28px;
+
+    color: #1e7048;
+}
+
+.stat span {
+    color: #78837d;
+
+    font-size: 12px;
+}
+
+.sobre-card {
+    position: relative;
+
+    min-height: 420px;
+
+    padding: 45px;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17613d,
+            #2d8957
+        );
+
+    box-shadow: 0 25px 60px rgba(23, 59, 43, 0.2);
+}
+
+.sobre-card::after {
+    content: "⌁";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -60px;
+
+    font-size: 280px;
+
+    color: rgba(255, 255, 255, 0.07);
+
+    transform: rotate(-20deg);
+}
+
+.mountain-icon {
+    font-size: 50px;
+
+    margin-bottom: 40px;
+}
+
+.sobre-card h3 {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.sobre-card p {
+    max-width: 400px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================
+   TRILHAS
+========================= */
+
+.trilhas {
+    padding: 110px 0;
+
+    background: #edf4e9;
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 55px;
+}
+
+.section-header p {
+    max-width: 380px;
+
+    color: #637268;
+
+    line-height: 1.8;
+}
+
+.trilhas-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.trilha-card {
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(23, 59, 43, 0.08);
+
+    transition: 0.4s;
+}
+
+.trilha-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 25px 50px rgba(23, 59, 43, 0.15);
+}
+
+.trilha-image {
+    height: 270px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.trilha-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.trilha-card:hover img {
+    transform: scale(1.08);
+}
+
+.nivel {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.facil {
+    background: #319b5c;
+}
+
+.medio {
+    background: #df9415;
+}
+
+.dificil {
+    background: #c94c3e;
+}
+
+.trilha-info {
+    padding: 27px;
+}
+
+.local {
+    color: #d18a12;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.trilha-info h3 {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 23px;
+
+    margin: 10px 0;
+}
+
+.trilha-info p {
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.trilha-details {
+    display: flex;
+
+    gap: 20px;
+
+    color: #456052;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+.trilha-info button {
+    border: none;
+
+    background: none;
+
+    color: #20734a;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   EXPERIÊNCIA
+========================= */
+
+.experiencia {
+    padding: 110px 0;
+
+    background: #fffdf7;
+}
+
+.center {
+    display: block;
+
+    text-align: center;
+}
+
+.center h2 {
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experiencia-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 60px;
+}
+
+.experience-item {
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    background: #f3f7ef;
+
+    transition: 0.3s;
+
+    text-align: center;
+}
+
+.experience-item:hover {
+    transform: translateY(-8px);
+
+    background: #e9f1e3;
+}
+
+.experience-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: auto auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f5c04c;
+
+    font-size: 30px;
+}
+
+.experience-item h3 {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.experience-item p {
+    color: #718078;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #125638,
+            #2f8958
+        );
+
+    color: white;
+}
+
+.cta-content > span {
+    color: #ffd166;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.cta h2 {
+    margin: 20px 0 35px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 1;
+}
+
+.cta h2 strong {
+    color: #ffd166;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    padding: 110px 0;
+
+    background: #fffdf7;
+}
+
+.contato-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.contato-grid > div > p {
+    max-width: 500px;
+
+    color: #68776d;
+
+    line-height: 1.8;
+}
+
+.contato-box {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px 25px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    color: #173b2b;
+
+    background: #f1f5ec;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    transform: translateX(8px);
+
+    background: #e6efdf;
+}
+
+.contact-button > span {
+    font-size: 28px;
+}
+
+.contact-button div {
+    flex: 1;
+}
+
+.contact-button strong,
+.contact-button small {
+    display: block;
+}
+
+.contact-button small {
+    margin-top: 3px;
+
+    color: #77847c;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 0;
+
+    background: #123d2a;
+
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-content img {
+    width: 90px;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+}
+
+.footer-content a {
+    color: #ffd166;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(10, 35, 24, 0.7);
+
+    backdrop-filter: blur(8px);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    max-width: 500px;
+
+    width: 100%;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background: #fffdf7;
+
+    animation: aparecer 0.3s ease;
+}
+
+.close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    color: #173b2b;
+
+    cursor: pointer;
+}
+
+.modal-icon {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    font-family: "Montserrat", sans-serif;
+
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #68776d;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes subirDescer {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 82px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        background: #fffdf7;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .sobre-grid,
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trilhas-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experiencia-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .stats {
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .section-header {
+        display: block;
+    }
+
+    .section-header p {
+        margin-top: 20px;
+    }
+
+    .trilhas-grid,
+    .experiencia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-card {
+        min-height: 350px;
+    }
+
+    .sobre-card h3 {
+        font-size: 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
